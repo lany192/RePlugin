@@ -9,10 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-
-/**
- * @author RePlugin Team
- */
 public class AppCompatActivityDemo extends AppCompatActivity {
 
     @Override

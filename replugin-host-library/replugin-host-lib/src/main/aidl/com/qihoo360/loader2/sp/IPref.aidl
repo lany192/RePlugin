@@ -1,10 +1,6 @@
 package com.qihoo360.loader2.sp;
 
 import android.os.Bundle;
-
-/**
- * @author RePlugin Team
- */
 interface IPref {
 
     String get(String category, String key, String defValue);

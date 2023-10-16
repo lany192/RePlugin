@@ -4,10 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.qihoo360.replugin.loader.a.PluginActivity;
-
-/**
- * @author RePlugin Team
- */
 public class ForResultActivity extends PluginActivity {
 
     @Override

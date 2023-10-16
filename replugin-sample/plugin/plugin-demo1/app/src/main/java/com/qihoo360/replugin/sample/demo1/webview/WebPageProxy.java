@@ -5,10 +5,6 @@ import android.view.View;
 import android.webkit.WebView;
 
 import java.lang.reflect.Method;
-
-/**
- * @author RePlugin Team
- */
 public class WebPageProxy extends ViewProxy<View> implements IWebPage {
 
     private static final String PLUGIN_NAME = "webview";

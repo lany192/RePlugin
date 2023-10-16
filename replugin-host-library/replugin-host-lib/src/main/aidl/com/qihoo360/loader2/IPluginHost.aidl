@@ -10,10 +10,6 @@ import com.qihoo360.replugin.model.PluginInfo;
 import com.qihoo360.replugin.component.service.server.IPluginServiceServer;
 
 import com.qihoo360.replugin.packages.IPluginManagerServer;
-
-/**
- * @author RePlugin Team
- */
 interface IPluginHost {
 
     void installBinder(String name, in IBinder binder);

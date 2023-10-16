@@ -4,10 +4,13 @@ buildscript {
     { p, cfg = "rp-config.gradle" -> if (new File(p, cfg).exists()) apply from: "${p}/${cfg}" else if (p.exists()) call(p.parentFile) }(buildscript.sourceFile.parentFile)
     repositories {
         mavenLocal()
-        jcenter()
+            maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "com.qihoo360.replugin:replugin-plugin-gradle:${RP_VERSION}"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -26,7 +29,10 @@ project.ext {
 allprojects {
     repositories {
         mavenLocal()
-        jcenter()
+            maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
     }
 }
 
