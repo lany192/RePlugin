@@ -1,23 +1,17 @@
-apply plugin: 'java'
-apply plugin: 'groovy'
-
-repositories {
-    jcenter()
-    mavenCentral()
-    google()
+plugins {
+    id("maven-publish")
+    id("org.jetbrains.kotlin.jvm")
+    id "java-gradle-plugin"
 }
 
-buildscript {
-    repositories {
-        jcenter()
-        mavenCentral()
-        google()
-    }
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
 
-    dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
-        classpath 'com.github.dcendents:android-maven-plugin:1.2'
-    }
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 dependencies {
@@ -32,5 +26,16 @@ dependencies {
     implementation 'com.google.gradle:osdetector-gradle-plugin:1.2.1'
     implementation 'net.dongliu:apk-parser:2.2.0'
 }
+
+gradlePlugin {
+    plugins {
+        ArouterPlugin {
+            id = 'replugin-host-gradle'
+            implementationClass = 'com.qihoo360.replugin.gradle.host.Replugin'
+        }
+    }
+}
+
+apply from: rootProject.file('gradle/publish.gradle')
 
 project.ext.RP_ARTIFACT_ID = 'replugin-host-gradle'
