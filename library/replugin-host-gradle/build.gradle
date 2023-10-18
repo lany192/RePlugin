@@ -20,8 +20,8 @@ dependencies {
     implementation gradleApi()
     implementation localGroovy()
 
-    implementation 'com.google.gradle:osdetector-gradle-plugin:1.2.1'
-    implementation 'net.dongliu:apk-parser:2.2.0'
+    implementation 'com.google.gradle:osdetector-gradle-plugin:1.7.3'
+    implementation 'net.dongliu:apk-parser:2.6.10'
 }
 
 gradlePlugin {
