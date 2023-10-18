@@ -2,11 +2,8 @@ plugins {
     id("maven-publish")
     id("org.jetbrains.kotlin.jvm")
     id "java-gradle-plugin"
-}
-
-dependencies {
-    implementation gradleApi()
-    implementation localGroovy()
+    id 'groovy'
+    id 'java'
 }
 
 java {
@@ -29,7 +26,7 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        ArouterPlugin {
+        RepluginHostPlugin {
             id = 'replugin-host-gradle'
             implementationClass = 'com.qihoo360.replugin.gradle.host.Replugin'
         }
@@ -37,5 +34,3 @@ gradlePlugin {
 }
 
 apply from: rootProject.file('gradle/publish.gradle')
-
-project.ext.RP_ARTIFACT_ID = 'replugin-host-gradle'

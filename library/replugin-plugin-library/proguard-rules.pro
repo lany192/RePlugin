@@ -33,4 +33,3 @@
 -keep class com.qihoo360.replugin.Entry { *; }
 -keep class com.qihoo360.replugin.RePlugin { public *; }
 -keep class com.qihoo360.replugin.model.PluginInfo { public *; }
-

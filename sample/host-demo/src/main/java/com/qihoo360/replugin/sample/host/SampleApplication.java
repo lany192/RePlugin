@@ -26,9 +26,7 @@ import com.qihoo360.replugin.RePluginCallbacks;
 import com.qihoo360.replugin.RePluginConfig;
 import com.qihoo360.replugin.RePluginEventCallbacks;
 
-/**
- * @author RePlugin Team
- */
+
 public class SampleApplication extends RePluginApplication {
 
     @Override
