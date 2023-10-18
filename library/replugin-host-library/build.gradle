@@ -14,6 +14,13 @@ android {
         consumerProguardFiles 'proguard-rules.pro'
     }
 
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -25,5 +32,4 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 }
-
-project.ext.RP_ARTIFACT_ID = 'replugin-host-lib'
+apply from: rootProject.file('gradle/publish.gradle')
