@@ -13,9 +13,6 @@ android {
         minSdk 21
         targetSdk 26
 
-        versionCode 1
-        versionName VERSION_NAME
-
         consumerProguardFiles 'proguard-rules.pro'
     }
 
@@ -26,6 +23,7 @@ android {
         }
     }
     compileOptions {
+        encoding 'UTF-8'
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }

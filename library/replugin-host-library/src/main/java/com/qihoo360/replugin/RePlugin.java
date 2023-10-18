@@ -345,7 +345,7 @@ public class RePlugin {
      * @since 2.0.0
      */
     public static String getVersion() {
-        return BuildConfig.VERSION_NAME;
+        return "1.0.0";
     }
 
     /**

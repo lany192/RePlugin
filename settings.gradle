@@ -1,9 +1,10 @@
 pluginManagement {
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
         google()
         gradlePluginPortal()
@@ -16,13 +17,15 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
 
-        mavenCentral()
         google()
-        maven { url "https://jitpack.io" }
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://www.jitpack.io' }
         mavenLocal()
     }
 }
@@ -40,4 +43,6 @@ include ':library:replugin-plugin-library'
 //include ':sample:plugin-webview'
 //include ':sample:FrescoHost'
 //include ':sample:FrescoPlugin'
+
+include ':sample:app'
 
