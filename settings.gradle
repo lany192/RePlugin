@@ -32,7 +32,11 @@ include ':library:replugin-plugin-gradle'
 include ':library:replugin-plugin-library'
 
 include ':sample:host'
-include ':sample:plugin'
+include ':sample:plugin-demo1'
+include ':sample:plugin-demo2'
+include ':sample:plugin-demo3-kotlin'
+include ':sample:plugin-webview'
+
 include ':sample:FrescoHost'
 include ':sample:FrescoPlugin'
 
