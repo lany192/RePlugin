@@ -1,1 +1,38 @@
-include ':replugin-plugin-library:replugin-plugin-lib'
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        mavenLocal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        mavenCentral()
+        google()
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+    }
+}
+rootProject.name = "replugin"
+
+include ':library:replugin-host-gradle'
+include ':library:replugin-host-library'
+include ':library:replugin-plugin-gradle'
+include ':library:replugin-plugin-library'
+
+include ':sample:host'
+include ':sample:plugin'
+include ':sample:FrescoHost'
+include ':sample:FrescoPlugin'
+

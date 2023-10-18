@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    google()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
+        classpath 'com.github.dcendents:android-maven-plugin:1.2'
+    }
+}
+
+dependencies {
+    implementation 'com.android.tools.build:gradle:3.5.4'
+    implementation 'org.json:json:20160212'
+    implementation 'org.codehaus.groovy:groovy:2.4.7'
+    implementation 'com.squareup:javapoet:1.5.1'
+
+    implementation gradleApi()
+    implementation localGroovy()
+
+    implementation 'com.google.gradle:osdetector-gradle-plugin:1.2.1'
+    implementation 'net.dongliu:apk-parser:2.2.0'
+}
+
+project.ext.RP_ARTIFACT_ID = 'replugin-host-gradle'
