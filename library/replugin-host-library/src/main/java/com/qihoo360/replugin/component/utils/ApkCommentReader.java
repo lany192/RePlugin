@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.component.utils;
 
 import java.io.ByteArrayInputStream;

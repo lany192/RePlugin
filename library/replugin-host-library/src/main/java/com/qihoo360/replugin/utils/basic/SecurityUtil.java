@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.utils.basic;
 
 import com.qihoo360.replugin.utils.CloseableUtils;

@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.loader.utils;
 
 import com.qihoo360.replugin.helper.LogRelease;

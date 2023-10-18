@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.plugin.injector.provider
 
 import com.qihoo360.replugin.gradle.plugin.inner.Util

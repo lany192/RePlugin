@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.loader2.mgr;
 
 import android.app.Service;

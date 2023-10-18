@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.base;
 
 import android.content.Context;

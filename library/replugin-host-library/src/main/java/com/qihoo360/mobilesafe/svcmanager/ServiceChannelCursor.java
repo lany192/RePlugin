@@ -1,6 +1,4 @@
 
-
-
 package com.qihoo360.mobilesafe.svcmanager;
 
 import android.database.Cursor;

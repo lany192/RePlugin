@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.plugin.util
 
 import com.qihoo360.replugin.gradle.plugin.AppConstant

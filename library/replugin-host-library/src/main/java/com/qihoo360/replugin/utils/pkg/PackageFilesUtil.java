@@ -1,6 +1,4 @@
 
-
-
 package com.qihoo360.replugin.utils.pkg;
 
 import android.content.Context;

@@ -10,7 +10,6 @@ pluginManagement {
         mavenCentral()
 
         maven { url 'https://www.jitpack.io' }
-//        maven { url "http://maven.geelib.360.cn/nexus/repository/replugin/" }
         mavenLocal()
     }
 }
@@ -24,7 +23,6 @@ dependencyResolutionManagement {
         mavenCentral()
         google()
         maven { url "https://jitpack.io" }
-//        maven { url "http://maven.geelib.360.cn/nexus/repository/replugin/" }
         mavenLocal()
     }
 }

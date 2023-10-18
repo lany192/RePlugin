@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.helper;
 
 import android.os.Build;

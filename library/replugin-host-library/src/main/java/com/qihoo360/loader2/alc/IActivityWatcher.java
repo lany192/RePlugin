@@ -3,9 +3,7 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
  * Original file: D:\\work\\p\\mobilesafe_v6_frame\\main\\src\\android\\app\\IActivityWatcher.aidl
- */
-
-package com.qihoo360.loader2.alc;
+ */package com.qihoo360.loader2.alc;
 
 /**
  * Callback interface to watch the user's traversal through activities.

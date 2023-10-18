@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.plugin.inner
 
 import com.android.build.api.transform.DirectoryInput

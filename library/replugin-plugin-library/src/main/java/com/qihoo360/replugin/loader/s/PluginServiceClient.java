@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.loader.s;
 
 import android.app.Service;

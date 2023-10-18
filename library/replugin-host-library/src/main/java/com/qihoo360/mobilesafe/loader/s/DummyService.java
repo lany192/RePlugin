@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.mobilesafe.loader.s;
 
 import android.app.Service;

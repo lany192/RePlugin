@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.packages;
 
 import android.os.RemoteException;

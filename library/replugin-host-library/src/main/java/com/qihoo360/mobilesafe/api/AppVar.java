@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.mobilesafe.api;
 
 import android.content.Context;

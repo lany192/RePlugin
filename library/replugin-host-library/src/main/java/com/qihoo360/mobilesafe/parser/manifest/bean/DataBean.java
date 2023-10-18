@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.mobilesafe.parser.manifest.bean;
 
 import android.os.PatternMatcher;

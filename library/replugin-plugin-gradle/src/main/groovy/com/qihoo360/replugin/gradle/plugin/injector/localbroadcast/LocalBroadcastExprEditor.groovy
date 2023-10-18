@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.plugin.injector.localbroadcast
 
 import javassist.CannotCompileException

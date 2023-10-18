@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.host.creator.impl.json
 
 /**

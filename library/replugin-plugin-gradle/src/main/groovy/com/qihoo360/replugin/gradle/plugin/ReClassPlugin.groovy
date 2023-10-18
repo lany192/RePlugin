@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.gradle.plugin
 
 import com.android.build.gradle.AppExtension

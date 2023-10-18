@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.component.dummy;
 
 import android.content.BroadcastReceiver;

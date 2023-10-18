@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.utils;
 
 import android.database.Cursor;

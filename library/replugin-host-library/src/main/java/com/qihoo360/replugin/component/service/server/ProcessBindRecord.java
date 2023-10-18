@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.component.service.server;
 
 import com.qihoo360.replugin.utils.basic.ArraySet;

@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.loader.utils2;
 
 import com.qihoo360.replugin.utils.ReflectUtils;

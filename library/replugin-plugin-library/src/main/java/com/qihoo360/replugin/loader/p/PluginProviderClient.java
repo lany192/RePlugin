@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.loader.p;
 
 import android.annotation.TargetApi;

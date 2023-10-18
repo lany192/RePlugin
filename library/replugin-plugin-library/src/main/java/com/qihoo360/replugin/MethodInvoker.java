@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin;
 
 import com.qihoo360.replugin.helper.LogDebug;

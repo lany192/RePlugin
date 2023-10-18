@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.mobilesafe.parser.manifest;
 
 import android.content.IntentFilter;

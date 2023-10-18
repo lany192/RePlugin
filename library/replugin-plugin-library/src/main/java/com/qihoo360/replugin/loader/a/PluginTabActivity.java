@@ -1,5 +1,3 @@
-
-
 package com.qihoo360.replugin.loader.a;
 
 import android.app.TabActivity;
