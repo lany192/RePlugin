@@ -29,11 +29,11 @@ android {
 apply plugin: 'replugin-plugin-gradle'
 
 dependencies {
-    compile "com.qihoo360.replugin:replugin-plugin-lib:3.0.0"
+    implementation "com.qihoo360.replugin:replugin-plugin-lib:3.0.0"
 
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
 
-    /** provided or compile */
+    /** provided or implementation */
     if (rootProject.ext.isPlugin) {
         // 作为插件，provided 方式引入
         provided "com.parse.bolts:bolts-android:1.4.0"
@@ -44,12 +44,12 @@ dependencies {
         provided files('libs/imagepipeline-base-1.7.1.jar')
     } else {
         // 作为单品，compile 进 APK
-        compile "com.parse.bolts:bolts-android:1.4.0"
+        implementation "com.parse.bolts:bolts-android:1.4.0"
 
-        compile files('libs/fresco-1.7.1.jar')
-        compile files('libs/fbcore-1.7.1.jar')
-        compile files('libs/drawee-modified-1.7.1.jar')
-        compile files('libs/imagepipeline-1.7.1.jar')
-        compile files('libs/imagepipeline-base-1.7.1.jar')
+        implementation files('libs/fresco-1.7.1.jar')
+        implementation files('libs/fbcore-1.7.1.jar')
+        implementation files('libs/drawee-modified-1.7.1.jar')
+        implementation files('libs/imagepipeline-1.7.1.jar')
+        implementation files('libs/imagepipeline-base-1.7.1.jar')
     }
 }
