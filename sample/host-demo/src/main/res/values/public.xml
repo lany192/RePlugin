@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-
-<resources>
-    <!-- 通知栏图标 -->
-    <public id="0x7f030002" name="notification_out" type="drawable" />
-</resources>
