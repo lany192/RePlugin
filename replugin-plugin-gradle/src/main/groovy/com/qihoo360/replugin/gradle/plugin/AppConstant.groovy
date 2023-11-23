@@ -6,7 +6,7 @@ package com.qihoo360.replugin.gradle.plugin
 class AppConstant {
 
     /** 版本号 */
-    def static final VER = "${RP_VERSION}"
+    def static final VER = "3.0.1"
 
     /** 打印信息时候的前缀 */
     def static final TAG = "< replugin-plugin-v${VER} >"
