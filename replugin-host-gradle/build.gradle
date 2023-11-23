@@ -1,8 +1,6 @@
-
-
 apply plugin: 'java'
 apply plugin: 'groovy'
-apply plugin: 'maven'
+apply plugin: 'java-gradle-plugin'
 apply plugin: 'maven-publish'
 
 repositories {
@@ -13,34 +11,66 @@ repositories {
     google()
 }
 
-buildscript {
-    repositories {
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' } //gradle-plugin
-        maven { url 'https://maven.aliyun.com/repository/google' } //google
-        maven { url 'https://maven.aliyun.com/repository/public' } //public
-        maven { url 'https://maven.aliyun.com/repository/jcenter' } //jcenter
-        mavenCentral()
-        google()
-    }
-
-    dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.0'
-        classpath 'com.github.dcendents:android-maven-plugin:1.2'
-    }
-}
-
 dependencies {
-    implementation 'com.android.tools.build:gradle:3.5.4'
-    implementation 'org.json:json:20160212'
-    implementation 'org.codehaus.groovy:groovy:2.4.7'
-    implementation 'com.squareup:javapoet:1.5.1'
+    implementation 'com.android.tools.build:gradle:8.0.0'
+    implementation 'org.json:json:20231013'
+    implementation 'org.codehaus.groovy:groovy:3.0.19'
+    implementation 'com.squareup:javapoet:1.13.0'
 
     implementation gradleApi()
     implementation localGroovy()
 
     implementation 'com.google.gradle:osdetector-gradle-plugin:1.2.1'
-    implementation 'net.dongliu:apk-parser:2.2.0'
+    implementation 'net.dongliu:apk-parser:2.6.10'
 }
 
-project.ext.RP_ARTIFACT_ID = 'replugin-host-gradle'
-apply from: '../rp-publish.gradle'
+gradlePlugin {
+    plugins {
+        RepluginHostPlugin {
+            id = 'replugin-host-gradle'
+            implementationClass = 'com.qihoo360.replugin.gradle.host.Replugin'
+        }
+    }
+}
+
+afterEvaluate { project ->
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'com.qihoo360.replugin'
+                artifactId = 'replugin-host-gradle'
+                version = '3.0.1'
+                afterEvaluate {
+                    from components.java
+                }
+            }
+        }
+    }
+
+    tasks.register('sourcesJar', Jar) {
+        dependsOn classes
+        getArchiveClassifier().convention('sources')
+        getArchiveClassifier().set('sources')
+        from sourceSets.main.allSource
+    }
+
+    tasks.register('javadocJar', Jar) {
+        dependsOn javadoc
+        getArchiveClassifier().convention('javadoc')
+        getArchiveClassifier().set('javadoc')
+        from javadoc.destinationDir
+    }
+
+    if (JavaVersion.current().isJava8Compatible()) {
+        allprojects {
+            tasks.withType(Javadoc) {
+                options.addStringOption('Xdoclint:none', '-quiet')
+            }
+        }
+    }
+
+    artifacts {
+        archives sourcesJar
+        archives javadocJar
+    }
+}
